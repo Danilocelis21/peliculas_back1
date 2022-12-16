@@ -9,5 +9,10 @@ app.get('/', async(req, res)=>{
     res.json(rows)
 })
 
+app.get('/createMovie', async(req,res) =>{
+    const result = await BD.query('INSERT INTO movie(name) VALUES ("Guerra de las galaxias")')
+    res.json(resultado)
+})
+
 app.listen(PORT)
 console.log('server port: 3001')
