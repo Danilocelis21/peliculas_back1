@@ -10,7 +10,7 @@ app.get('/', async(req, res)=>{
 })
 
 app.get('/createMovie', async(req,res) =>{
-    const result = await BD.query('INSERT INTO movie(name) VALUES ("Guerra de las galaxias")')
+    const resultado = await BD.query('INSERT INTO peliculas(name) VALUES ("Guerra de las galaxias")')
     res.json(resultado)
 })
 
